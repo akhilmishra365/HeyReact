@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px ;
+    border : 1px solid black;
+ } 
+ 
+ .nav-items ul{
+     display: flex;
+     list-style: none;
+    
+ }
+ .nav-items ul li{
+     padding: 10px;
+ }
+ .logo{
+     padding: 10px;
+      width: 100px;
+ }
+ .card{
+     border: 1px solid black;
+     width: 200px;
+     padding: 1rem; 
+     margin: 1rem;
+ }
+ .card  > img{
+     width: 100%;
+     
+ }
+ .restraunt-list{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ }
+
+ .shimmer-card{
+    width: 200px;
+    height: 200px;
+    background : rgba(128, 128, 128, 0.497);
+    margin: 20px;
+    
+}

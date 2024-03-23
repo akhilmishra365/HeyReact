@@ -1,0 +1,4 @@
+{
+    "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+    //ye jo exclude hain na ye btata hai k error aur warn console se remove nhi honge so it just removes the console.log() we can configuere it as we want; 
+}

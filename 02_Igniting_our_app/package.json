@@ -1,0 +1,27 @@
+{
+  "name": "02_igniting_our_app",
+  "version": "1.0.0",
+  "description": "A react repo",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilmishra365/React_with_notes.git"
+  },
+  "author": "Akhil Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhilmishra365/React_with_notes/issues"
+  },
+  "homepage": "https://github.com/akhilmishra365/React_with_notes#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

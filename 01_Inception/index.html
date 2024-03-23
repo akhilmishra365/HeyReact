@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST LECTURE</title>
+</head>
+<body>
+    <!-- <div id = "root">
+
+    </div> -->
+  
+
+<!-- we inserted h1 tag using javscript ; -->
+
+<!-- <Script>
+    document.getElementById("root").innerHTML = "Namaste"
+    const heading = document.createElement("h1");
+    heading.innerHTML = "Namaste from Javascript"
+    const root = document.getElementById("root");
+    root.appendChild(heading); 
+</Script> -->
+
+<!-- now we will do it using react  -->
+<!-- injecting react in our code via CDN links-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> 
+<!-- react 18 means latest version and react dom has react document object model  -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- now react is a global object  -->
+
+<script>
+//  syntax for creating an element in React.createElement("tag jo tumhe chahiye" ,ek object ,aur jo tumhe tag ke andr likhna hai) ; 
+
+//dekho ap object ko empty rkh skte hain but ye object ka jo parameter hai uske andr hm ye likh skte hain jaise ki <h1 id = title> namaste react </h1> 
+//toh vhi chiz react me hm us curly brace me rkhte hain {id : title}
+
+  const heading = React.createElement("h1" , {
+    id : "title",
+  } , "Namaste Everyone !") 
+  //now we need to put it in our root ==> remember we did document.appendchildroot()
+  //in react we have to assign div root to something
+  //so suppose i have  div root and i have to run react in my div  so 
+  //creates a root element in div 
+  //this line below tells react that i want to run my react in this root element ; 
+  const root =  ReactDOM.createRoot(document.getElementById("root")) ;  // WHATEVER IS PUT INSIDE THIS FUNCTION BECOMES AN ROOT ELEMENT
+  //passing a react elememnt inside the root ;
+  // root.render(heading) ; 
+  //this render method takes an react element and modifies dom / injectes it inside our dom  ;
+  //in react every tag is considered as an element which is end of the day an object ;
+  //we can also use every java script  function ;
+
+
+  //suppose i want to create this type of complex html 
+//   <div id = "container">
+//     <h1>heading1</h1>
+//     <h1>heading1</h1>
+//     </div> 
+// how can i create it in reacy 
+const heading1 = React.createElement("h1" ,{id : "heading1" ,Style :"background-color : red"},"MY FIRST HEADING");
+const heading2 = React.createElement("h1" ,{id : "heading2" ,Style :"background-color : blue"},"MY Second HEADING")
+//now create a div
+const container  = React.createElement("div" , {id : "container"} , [heading , heading1,heading2]) ; 
+//jb multiple heading /element ya "children daalne ho root me toh hm array ka use krte hain"
+//now i want to my container to be put inside root;
+
+root.render(container) ; 
+//React renders HTML to the web page by using a function called render().It is A way of manupulating dom and it overwrites not appends
+
+//The purpose of the function is to display the specified HTML code inside the specified HTML element.
+</script>
+</body>
+</html>
+<!-- CAN WE HAVE MULTIPLE ROOT ? AND MULTIPLE RENDER ?
+GENERALLY EVERY APP YOU BUILD NO MATTER HOW BIG IT IS WILL HAVE AN SINGLE ROOT ELEEMNT ; -->
+
+<!-- Basically root is what is where react runs  -->
+<!-- we can have html and react both inside our website 
+for example if we want to use react inside our footer only just upr jha root likha tha "root" ==> uski jagah "footer" daal do ;  -->
+
+
+<!-- this below is the only code we need to write for react ;  -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST LECTURE</title>
+</head>
+<body>
+    <div id = "root"></div>
+  
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> 
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+<script>
+  const heading = React.createElement("h1" , {} , "Namaste Everyone !") 
+  const root =  ReactDOM.createRoot(document.getElementById("root")) ;  
+  root.render(heading) ; 
+</script>
+</html> -->
